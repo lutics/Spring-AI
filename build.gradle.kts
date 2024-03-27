@@ -17,7 +17,6 @@ java {
 repositories {
     mavenCentral()
     maven("https://repo.spring.io/milestone")
-    maven("https://repo.spring.io/snapshot")
 }
 
 dependencies {
@@ -30,7 +29,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
-    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter:0.8.0-SNAPSHOT")
+    implementation(platform("org.springframework.ai:spring-ai-bom:0.8.1"))
+    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
