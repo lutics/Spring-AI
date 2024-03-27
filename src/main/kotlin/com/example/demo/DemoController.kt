@@ -10,7 +10,7 @@ import org.springframework.ai.embedding.EmbeddingResponse as EmbeddingResponse1
 @RestController
 class DemoController(
     private val chatClient: ChatClient,
-    private val embeddingClient: EmbeddingClient
+//    private val embeddingClient: EmbeddingClient
 ) {
 
     @GetMapping("ai/chat")
@@ -22,12 +22,12 @@ class DemoController(
         return response
     }
 
-    @GetMapping("ai/embedding")
-    suspend fun embed(
-        @RequestParam(value = "message", defaultValue = "hello world") message: String
-    ): EmbeddingResponse1? {
-        val embeddingResponse = embeddingClient.embedForResponse(listOf(message))
-
-        return embeddingResponse
-    }
+//    @GetMapping("ai/embedding")
+//    suspend fun embed(
+//        @RequestParam(value = "message", defaultValue = "hello world") message: String
+//    ): EmbeddingResponse1? {
+//        val embeddingResponse = embeddingClient.embedForResponse(listOf(message))
+//
+//        return embeddingResponse
+//    }
 }
