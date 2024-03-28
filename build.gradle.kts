@@ -31,7 +31,8 @@ dependencies {
 
     implementation(platform("org.springframework.ai:spring-ai-bom:0.8.1"))
 //    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
-    implementation("org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter")
+//    implementation("org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter")
+    implementation("org.springframework.ai:spring-ai-azure-openai-spring-boot-starter")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
